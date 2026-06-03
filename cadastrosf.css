@@ -1,8 +1,7 @@
-
 body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #730f75, rgb(70, 6, 104));
+    background: linear-gradient(135deg, #e0cd00, rgb(19, 20, 17));
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -83,4 +82,15 @@ button {
 
 .link a:hover{
     text-decoration: underline;
+}
+.bb {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    
 }
