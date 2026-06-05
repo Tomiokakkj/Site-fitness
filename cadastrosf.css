@@ -1,16 +1,23 @@
+/* ========================================= */
+/* GERAL */
+/* ========================================= */
+
 body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #e0cd00, rgb(19, 20, 17));
+    background: linear-gradient(135deg, #000000, #3a2a00);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
-.container {
-    background: rgba(84, 9, 119, 0.1);
+/* ========================================= */
+/* CONTAINER */
+/* ========================================= */
+
+.container{
+    background: rgba(#1a1a1a);
     padding: 40px;
     width: 320px;
     border-radius: 15px;
@@ -18,17 +25,19 @@ body{
     box-shadow: 0 10pxx 30px rgba(0, 0, 0, 0, 4);
     text-align: center;
     color: white;
-
+    border: 5px solid #FFD700;
 }
 
-.container h2 {
+.container h2{
     margin-bottom: 25px;
     font-weight: 600;
-
 }
 
-form input {
+/* ========================================= */
+/* FORMULÁRIO */
+/* ========================================= */
 
+form input{
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -38,59 +47,75 @@ form input {
     background: rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 14px;
-
+    border: 2px solid #FFD700;
 }
 
-button:hover {
-transform: scale(1.05);
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 3);
-}
-
-form input::placeholder {
+form input::placeholder{
     color: #ddd;
-
 }
 
-form input:focus {
-background: rgba(255, 255, 255, 0.3);
+form input:focus{
+    background: rgba(255, 255, 255, 0.3);
 }
 
-button {
+/* ========================================= */
+/* BOTÃO */
+/* ========================================= */
+
+button{
     width: 100%;
     padding: 12px;
     margin-top: 15px;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    background: linear-gradient(135deg, #ffd900d5, #ffb7008f);
     color: white;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.link {
-    margin-top: 15px;
-    font-size: 14px;
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 3);
 }
 
-.link a {
-    color: #00c6ff;
+/* ========================================= */
+/* LINK LOGIN */
+/* ========================================= */
+
+.link{
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    background: linear-gradient(135deg, #ffb7008f);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.link a{
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-
 }
 
 .link a:hover{
     text-decoration: underline;
 }
-.bb {
+
+/* ========================================= */
+/* BOTÃO VOLTAR */
+/* ========================================= */
+
+.bb{
     display: inline-block;
     padding: 8px 15px;
     font-size: 14px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    background: linear-gradient(135deg, #ffd900d5, #ffb7008f);
     color: white;
     text-decoration: none;
     border-radius: 8px;
     margin-bottom: 15px;
-    
 }
