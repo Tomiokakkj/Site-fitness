@@ -1,72 +1,83 @@
 /* ========================================= */
-/* GERAL */
+/* CONFIGURAÇÕES GERAIS E REBOOT             */
 /* ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-body{
-    margin: 0%;
+body {
+    font-family: Arial, sans-serif;
     background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* ========================================= */
-/* HEADER E NAVEGAÇÃO */
+/* HEADER E NAVEGAÇÃO                        */
 /* ========================================= */
-
-header{
+header {
     background: linear-gradient(#e0d108ee, #d0af08da);
     color: white;
-    padding: 5px;
+    padding: 15px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
     border-bottom: 5px solid #000000;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-header h1{
+header h1 {
     font-family: "Cormorant Garamond", serif;
     font-optical-sizing: auto;
     font-weight: 550;
     font-style: normal;
 }
 
-nav{
+nav.link {
     display: flex;
+    align-items: center;
     gap: 20px;
-    
-
 }
 
-nav a{
-    color: white;
-    text-decoration: none;
-    text-align: right;
-}
-.link {
-    text-align: right;
-    
-}
-
-.link a{
+nav.link a {
     color: rgb(255, 255, 255);
     text-decoration: none;
-    text-align: right;
-    justify-content: flex-end;
     font-weight: bold;
-    display: flex;
-    margin-left: 550px;
-    margin-right: -550px;
+    transition: color 0.2s ease;
 }
 
-.link a:hover{
+nav.link a:hover {
     color: rgb(0, 0, 0);
 }
 
-/* ========================================= */
-/* CARROSSEL */
-/* ========================================= */
+/* Botão do Carrinho no Header */
+#btn-carrinho {
+    background-color: #000000;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
 
-.container-carrossel{
-    width: 800px;
+#btn-carrinho:hover {
+    background-color: #FFD700;
+    color: #000000;
+}
+
+/* ========================================= */
+/* CARROSSEL ADAPTÁVEL                       */
+/* ========================================= */
+.container-carrossel {
+    width: 100%;
+    max-width: 800px;
     height: 400px;
     margin: 20px auto;
     overflow: hidden;
@@ -74,130 +85,277 @@ nav a{
     border: 5px solid #FFD700;
 }
 
-.scroller{
+.scroller {
     display: flex;
+    width: 100%;
     animation: slide 12s infinite;
 }
 
-.slide{
+.slide {
     min-width: 100%;
 }
 
-.slide img{
+.slide img {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
-@keyframes slide{
-
-    0%, 30%{
-        transform: translateX(0);
-    }
-
-    33%, 63%{
-        transform: translateX(-100%);
-    }
-
-    66%, 96%{
-        transform: translateX(-200%);
-    }
-
-    100%{
-        transform: translateX(0);
-    }
+@keyframes slide {
+    0%, 30% { transform: translateX(0); }
+    33%, 63% { transform: translateX(-100%); }
+    66%, 96% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
 }
 
 /* ========================================= */
-/* TÍTULO PLANOS */
+/* PRODUTOS (Cards Estilo Original)          */
 /* ========================================= */
-
-.pl{
-    text-align: center;
-}
-
-/* ========================================= */
-/* PLANOS */
-/* ========================================= */
-
-.Planos{
-    text-align: center;
+.produtos {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
     flex-wrap: wrap;
 }
 
-.plano{
+.pdr {
     background-color: rgb(255, 255, 255);
     width: 250px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     border: 5px solid #FFD700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.plano ul{
+.pdr h2 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.pdr img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.pdr h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* ========================================= */
+/* PLANOS (Cards Estilo Original)            */
+/* ========================================= */
+.pl {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.Planos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.plano {
+    background-color: rgb(255, 255, 255);
+    width: 280px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 5px solid #FFD700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plano h2 {
+    color: #000;
+}
+
+.plano ul {
     text-align: left;
+    list-style-position: inside;
+    margin: 20px 0;
+    color: #333;
 }
 
-.plano li{
+.plano li {
     margin-bottom: 8px;
 }
 
 /* ========================================= */
-/* PRODUTOS */
+/* BOTÕES DE COMPRA E SELEÇÃO (Estilizados)  */
 /* ========================================= */
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: #FFD700;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: auto;
+}
 
-.produtos{
-    text-align: center;
+.add-to-cart:hover {
+    background-color: #FFD700;
+    color: #000000;
+    border-color: #FFD700;
+}
+
+/* ========================================= */
+/* ABA LATERAL DO CARRINHO                   */
+/* ========================================= */
+.carrinho-aba {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    z-index: 1000;
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.produtos img{
-    width: 200px;
-    height: 200px;
-}
-
-.pdr{
-    background-color: rgb(255, 255, 255);
-    width: 250px;
+    flex-direction: column;
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    border: 5px solid #FFD700;
+    box-sizing: border-box;
+    color: #333;
 }
 
-/* ========================================= */
-/* FOOTER */
-/* ========================================= */
-
-footer{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 25px;
-    text-align: left;
-    border-top: 5px solid #000000;
-    background: linear-gradient(#e0d108ee, #d0af08da);
-
+.carrinho-aba.fechar {
+    transform: translateX(100%);
 }
 
-footer .fot{
-
+.carrinho-header {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    border: 0px;
-    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
-footer .fot ul li{
+#fechar-carrinho {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+#itens-carrinho {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+.item-no-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.carrinho-footer {
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+}
+
+#finalizar-compra {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#finalizar-compra:hover {
+    background-color: #218838;
+}
+
+/* ========================================= */
+/* RODAPÉ                                    */
+/* ========================================= */
+footer {
+    background: linear-gradient(#e0d108ee, #d0af08da);
+    color: white;
+    padding: 25px 20px;
+    margin-top: 50px;
+    border-top: 5px solid #000000;
+}
+
+footer .fot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .fot h1 {
+    font-size: 1.8rem;
+}
+
+footer .fot ul {
     list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* ========================================= */
+/* MEDIA QUERIES (Ajustes Mobile)            */
+/* ========================================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-carrossel {
+        height: 250px;
+        margin: 10px;
+    }
+
+    .slide img {
+        height: 250px;
+    }
+
+    footer .fot {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    footer .fot ul {
+        justify-content: center;
+    }
+
+    .carrinho-aba {
+        width: 100%;
+    }
 }
