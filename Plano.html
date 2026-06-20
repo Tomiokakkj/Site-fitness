@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Plano.css">
+</head>
+
+<body>
+    <!-- PLANOS -->
+    <!-- ========================================= -->
+    <h1 class="pl">Planos</h1>
+
+    <div class="Planos">
+
+        <div class="plano">
+
+            <h2>Plano Simples</h2>
+
+            <ul>
+                <li>Acesso à musculação</li>
+                <li>Equipamentos de cardio</li>
+                <li>Avaliação física inicial</li>
+                <li>Treino personalizado básico</li>
+                <li>Acompanhamento dos instrutores</li>
+            </ul>
+
+            <h2>R$ 50,00/mês</h2>
+            <button class="add-to-cart" data-nome="Plano Simples" data-preco="50.00">Selecionar Plano</button>
+
+        </div>
+
+        <div class="plano">
+
+            <h2>Plano Intermediário</h2>
+
+            <ul>
+                <li>Tudo do plano básico</li>
+                <li>Aulas de dança</li>
+                <li>Aulas de funcional</li>
+                <li>Aulas de spinning</li>
+                <li>Reavaliação física mensal</li>
+                <li>Horários estendidos</li>
+            </ul>
+
+            <h2>R$ 90,00/mês</h2>
+            <button class="add-to-cart" data-nome="Plano Intermediário" data-preco="90.00">Selecionar Plano</button>
+
+        </div>
+
+        <div class="plano">
+
+            <h2>Plano Premium</h2>
+
+            <ul>
+                <li>Tudo do plano intermediário</li>
+                <li>Acesso a todas as unidades</li>
+                <li>Consultoria nutricional</li>
+                <li>Treino avançado</li>
+                <li>Área VIP</li>
+                <li>Atendimento prioritário</li>
+            </ul>
+
+            <h2>R$ 150,00/mês</h2>
+            <button class="add-to-cart" data-nome="Plano Premium" data-preco="150.00">Selecionar Plano</button>
+
+        </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- ESTRUTURA VISUAL DO CARRINHO (LATERAL) -->
+    <!-- ========================================= -->
+    <div id="carrinho-aba" class="carrinho-aba fechar">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button id="fechar-carrinho">&times;</button>
+        </div>
+        <div id="itens-carrinho"></div>
+        <div class="carrinho-footer">
+            <h3>Total: R$ <span id="total-carrinho">0,00</span></h3>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- RODAPÉ (Corrigido sem duplicidade) -->
+    <!-- ========================================= -->
+    <footer>
+
+        <div class="fot">
+
+            <h1>Academia</h1>
+
+            <p>CRIADORES:</p>
+
+            <ul>
+                <li>Fernandes</li>
+                <li>Levi</li>
+                <li>Portuga</li>
+                <li>Cabritu</li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+    <!-- Scripts carregados ao final do body -->
+    <script src="cart.js"></script>
+</body>
+</html>
