@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Compra.css">
+
+</head>
+
+<body>
+    <header>
+        <div  class="titulo">
+            <h1>Finalizar Compra</h1>
+        </div>
+    </header>
+
+
+
+    <div class="CTZ">
+        <h2>Resumo do Pedido</h2>
+
+    <div id="lista-carrinho"></div>
+
+    <h3>Total: R$ <span id="total">0,00</span></h3>
+    <a class="bb" href="inicialsf.html">Voltar</a>
+
+    </div>
+
+<script>
+    const carrinho = JSON.parse(localStorage.getItem("carrinho_corefit")) || [];
+
+    const lista = document.getElementById("lista-carrinho");
+    const totalElemento = document.getElementById("total");
+
+    let total = 0;
+
+    carrinho.forEach(item => {
+        const div = document.createElement("div");
+
+        div.innerHTML = `
+            <p>
+                <strong>${item.nome}</strong><br>
+                Quantidade: ${item.quantidade}<br>
+                Valor: R$ ${(item.preco * item.quantidade).toFixed(2).replace(".", ",")}
+            </p>
+            <hr>
+        `;
+
+        lista.appendChild(div);
+
+        total += item.preco * item.quantidade;
+    });
+
+    totalElemento.textContent = total.toFixed(2).replace(".", ",");
+</script>
+    
+</body>
+</html>
