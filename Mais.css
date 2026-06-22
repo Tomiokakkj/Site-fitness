@@ -1,0 +1,210 @@
+/* Página */
+body {
+    background-color: #000000b4;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000;
+    border-bottom: 3px solid #06d3e6da;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+header h1 {
+    color: #06d3e6da;
+}
+
+/* Navegação */
+.link a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 18px;
+    border: 2px solid #06d3e6da;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.link a:hover {
+    background-color: #06d3e6da;
+    color: black;
+}
+
+/* Galeria de imagens */
+/* Container das imagens */
+.imagens {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Estilo das imagens + animação */
+.imagens img {
+    width: 360px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    animation: entrada 0.8s ease forwards;
+}
+
+.imagens img:hover {
+    transform: scale(1.05);
+}
+
+/* Efeito de escada */
+.img1 {
+    margin-top: 0;
+    border: solid #06d3e6da;
+}
+
+.img2 {
+    margin-top: 40px;
+    border: solid #06d3e6da;
+}
+
+.img3 {
+    margin-top: 80px;
+    border: solid #06d3e6da;
+}
+
+.img4 {
+    margin-top: 120px;
+    border: solid #06d3e6da;
+}
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.locali{
+    text-align: center;
+    
+}
+
+.localidade {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 40px;
+}
+.localidade img{
+    border: solid #06d3e6da;
+}
+.localidade loq {
+    width: 700px;
+    height: auto;
+}
+
+/* Estilo das imagens + animação */
+.localidade img {
+    width: 500px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    animation: entrada 0.8s ease forwards;
+}
+
+.localidade img:hover {
+    transform: scale(1.05);
+}
+/* ===========================
+   TÍTULO
+=========================== */
+.pl {
+    text-align: center;
+    color: #fff;
+    margin: 40px 0;
+}
+/* ===========================
+   Link inicio
+=========================== */
+.Voltar{
+    text-align: center;
+}
+.Voltar a{
+     color: white;
+    text-decoration: none;
+}
+
+
+
+/* ===========================
+   Noticias
+=========================== */
+.Noticias {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: black;
+}
+
+.NT {
+    width: 280px;
+    background: #fff;
+    border: 5px solid #06d3e6da;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.NT h2 {
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.NT ul {
+    text-align: left;
+    margin: 15px 0;
+    color: #333;
+}
+
+.NT li {
+    margin-bottom: 8px;
+}
+.Ni{
+    text-align: center;
+}
+.loq{
+    text-align: center;
+    text-decoration: none;
+}
+.loq ul{
+    list-style: none;
+}
+.treino {
+    width: 750px;
+    padding-left: 20px;
+}
+.texto{
+    width: 750px;
+    padding-left: 20px;
+}
+.ofc{
+    text-align: center;
+}
+.ofcc ul{
+    list-style: none;
+}
+.ofcc li{
+    list-style: none;
+}
