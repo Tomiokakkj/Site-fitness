@@ -1,6 +1,11 @@
 /* ========================================= */
-/* GERAL */
+/* REGRAS GERAIS E CORREÇÃO DE TAMANHO */
 /* ========================================= */
+
+/* ESSA REGRA É CRUCIAL: Ela impede que inputs e botões fiquem desalinhados ou saiam do container */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 body{
     margin: 0;
@@ -17,12 +22,12 @@ body{
 /* ========================================= */
 
 .container{
-    background: rgba(#1a1a1a);
+    background: rgba(26, 26, 26, 0.8); /* Corrigido: rgba precisa de valores separados por vírgula e opacidade */
     padding: 40px;
-    width: 320px;
+    width: 400px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10pxx 30px rgba(0, 0, 0, 0, 4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Corrigido: era '10pxx' e a opacidade estava como '0, 4' */
     text-align: center;
     color: white;
     border: 5px solid #06d3e6da;
@@ -77,7 +82,7 @@ button{
 
 button:hover{
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Corrigido: opacidade era '0, 3' */
 }
 
 /* ========================================= */
@@ -91,7 +96,7 @@ button:hover{
     padding: 5px 10px;
     margin-right: 25px;
     font-size: 14px;
-    background: linear-gradient(135deg, #06d3e6da);
+    background: #06d3e6da; /* Corrigido: linear-gradient precisa de no mínimo duas cores. Mudado para cor sólida. */
     color: white;
     text-decoration: none;
     border-radius: 9px;
@@ -113,7 +118,7 @@ button:hover{
 /* ========================================= */
 
 .bb{
-    display: inline-block;
+    display: inline-flex; /* Alterado de inline-block para inline-flex para o 'justify-content' e 'gap' funcionarem */
     padding: 8px 15px;
     font-size: 14px;
     background: linear-gradient(135deg, #0fbda6ee, #06d3e6da);
