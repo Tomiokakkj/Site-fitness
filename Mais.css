@@ -4,6 +4,13 @@ body {
     color: white;
     margin: 0;
     font-family: Arial, sans-serif;
+    background-image: 
+      linear-gradient(rgba(0, 0, 0, 0.611)),
+    url("ChatGPT\ Image\ 24\ de\ jun.\ de\ 2026\,\ 20_05_25.png");
+     background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; /* Evita repetição */
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
 }
 
 /* Cabeçalho */
@@ -165,6 +172,7 @@ header h1 {
     text-align: center;
     display: flex;
     flex-direction: column;
+    
 }
 
 .NT h2 {
@@ -184,27 +192,103 @@ header h1 {
 .Ni{
     text-align: center;
 }
+/*loaclização*/
 .loq{
     text-align: center;
     text-decoration: none;
+    margin-top: -45px; 
+   
 }
 .loq ul{
     list-style: none;
+
 }
 .treino {
     width: 750px;
-    padding-left: 20px;
+    padding-left: 450px;
+    
 }
 .texto{
     width: 750px;
-    padding-left: 20px;
+    padding-left: 450px;
 }
-.ofc{
+.ofc-lista {
     text-align: center;
 }
-.ofcc ul{
-    list-style: none;
+.ofc-lista  ul{
+    width: 20%;
+    margin: 0% auto;
+    
 }
-.ofcc li{
+.ofc-lista  li{
+    border-radius: 8px;
+    padding: 12px;
+    margin: 8px 0;
+    list-style: none;
+    padding: 15px;
+    border: 15px;
+    border: 5px solid #06d3e6da;
+}
+.ofc-lista {
+    display: flex;
+    justify-content: center;
+    gap:  -77px;
+}
+
+.ofc-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ofc-lista li {
+    margin: 8px 0;
+}
+
+.oq h2{
+    text-align: center;
+}
+/* ===========================
+   Horarios
+=========================== */
+.HF{ 
+    text-align: center;
+    border: 5px solid #06d3e6da;
+    width: 300px;
+    margin: 0% auto;
+    margin-top: 20px;
+}
+.HF ul{
+    list-style: none;
+    
+}
+
+
+footer {
+    background: linear-gradient(#0fbda6ee, #06d3e6da);
+    color: white;
+    padding: 25px 20px;
+    margin-top: 50px;
+    
+}
+
+footer .fot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .fot h1 {
+    font-size: 1.8rem;
+}
+
+footer .fot Criadores ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+ooter .fot Criadores li{
     list-style: none;
 }
