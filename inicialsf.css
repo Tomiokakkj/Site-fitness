@@ -11,6 +11,16 @@ body {
     font-family: Arial, sans-serif;
     background-color: rgb(0, 0, 0);
     overflow-x: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.842), rgba(0, 0, 0, 0.75)), url('https://images.pexels.com/photos/6046979/pexels-photo-6046979.png?_gl=1*lzohby*_ga*MjQ1MDc2OTU2LjE3ODI0MjMyMDg.*_ga_8JE65Q40S6*czE3ODI0MjMyMDckbzEkZzEkdDE3ODI0MjMzNjkkajU4JGwwJGgw');
+    
+    /* Garante que a imagem cubra a tela toda sem se repetir */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Opcional: mantém o fundo fixo ao rolar a página */
+    
+    /* Garante que os textos padrões do site continuem legíveis (brancos) */
+    color: #ffffff; 
 }
 
 img {
@@ -28,7 +38,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 5px solid #000000;
     flex-wrap: wrap;
     gap: 15px;
 }
@@ -68,7 +77,7 @@ nav.link a:hover {
 }
 
 #btn-carrinho:hover {
-    background-color: #06d3e6da;
+    background-color: #05838f;
     color: #000000;
 }
 
@@ -77,28 +86,51 @@ nav.link a:hover {
 /* ========================================= */
 .container-carrossel {
     width: 100%;
-    max-width: 8000px;
-    height: 400px;
+    max-width: 1500px;
+    height: 500px;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
     border: 5px solid #06d3e6da;
+    position: relative;
 }
 
 .scroller {
     display: flex;
     width: 100%;
-    animation: slide 12s infinite;
-}
 
+/*Isso faz o slide deslizar suavemente quando o JS agir */
+    transition: transform 0.5s ease-in-out; 
+}
 .slide {
     min-width: 100%;
 }
 
 .slide img {
     width: 100%;
-    height: 400px;
+    height: 550px;
     object-fit: cover;
+    object-fit: cover;  /* Mantém o corte proporcional sem distorcer a foto */
+    display: block;     /* Remove espaçamentos fantasmas na base da imagem */
+}
+
+.seta {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  background-color: rgba(182, 180, 180, 0.336);
+  border: none;
+  z-index: 10;
+}
+
+.seta-anterior { left: 10px; }
+.seta-proxima { right: 10px; }
+
+.seta:hover {
+  background-color: #00bbd49a; 
 }
 
 @keyframes slide {
@@ -113,17 +145,20 @@ nav.link a:hover {
 /* ========================================= */
 .produtos {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    max-width: 1200px;
+    justify-content: center; /* Centraliza a linha caso tenha menos de 4 produtos */
+    gap: 20px;               /* Reduzido de 30px para 20px para respirar melhor na horizontal */
+    max-width: 1400px;       /* AUMENTADO: Garante espaço suficiente para os 4 itens alinhados */
     margin: 30px auto;
     padding: 0 20px;
     flex-wrap: wrap;
+    box-sizing: border-box;  /* Garante que o padding e bordas não quebrem o cálculo matemático */
 }
 
 .pdr {
     background-color: rgb(255, 255, 255);
-    width: 250px;
+    /* ALTERADO: Calcula 25% da tela menos a proporção dos espaços (gap) para encaixar 4 itens perfeitos */
+    width: calc(25% - 15px); 
+    min-width: 240px;        /* Evita que o card esmague muito em telas médias */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -132,16 +167,20 @@ nav.link a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;  /* Crucial junto com o calc acima */
+    background-color: transparent; /* Garante que o fundo seja removido */
 }
 
+/* Mantém suas estilizações de textos e imagens exatamente iguais */
 .pdr h2 {
     font-size: 1.5rem;
-    color: #000;
+    color: #e0e0e0;
     margin-bottom: 10px;
 }
 
 .pdr img {
-    width: 200px;
+    width: 100%;             /* ALTERADO: Faz a imagem se adaptar ao novo tamanho flexível do card */
+    max-width: 200px;        /* Garante que ela não passe do tamanho original que você queria */
     height: 200px;
     object-fit: contain;
     margin-bottom: 15px;
@@ -149,9 +188,10 @@ nav.link a:hover {
 
 .pdr h3 {
     font-size: 1.1rem;
-    color: #333;
+    color: #e4e4e4;
     margin-bottom: 15px;
 }
+
 
 /* ========================================= */
 /* PLANOS (Cards Estilo Original)            */
@@ -205,7 +245,7 @@ nav.link a:hover {
 .add-to-cart {
     width: 100%;
     padding: 10px;
-    background-color: #000000;
+    background-color: #004f57d8;
     color: #06d3e6da;
     border: 2px solid #000000;
     border-radius: 5px;
@@ -306,14 +346,14 @@ footer {
     color: white;
     padding: 25px 20px;
     margin-top: 50px;
-    border-top: 5px solid #000000;
+
 }
 
 footer .fot {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
