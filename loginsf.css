@@ -2,6 +2,11 @@
 /* GERAL */
 /* ========================================= */
 
+/* Aplicando box-sizing globalmente para evitar que padding/borda quebrem o layout */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,12 +22,12 @@ body{
 /* ========================================= */
 
 .container{
-    background: rgba(#1a1a1a);
+    background: rgba(26, 26, 26, 0.8); /* Corrigido: rgba precisa de 4 valores ou use hex #1a1a1a */
     padding: 40px;
-    width: 320px;
+    width: 400px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10pxx 30px rgba(0, 0, 0, 0, 4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Corrigido: era '10pxx' e a opacidade era '0, 4' */
     text-align: center;
     color: rgb(74, 6, 120);
     border: 5px solid #0fbda6ee;
@@ -49,6 +54,7 @@ form input{
     color: white;
     font-size: 14px;
     border: 2px solid #06d3e6da;
+    /* O box-sizing: border-box aqui garante que os 12px de padding fiquem DENTRO dos 100% de largura */
 }
 
 form input::placeholder{
@@ -78,7 +84,7 @@ button{
 
 button:hover{
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Corrigido: opacidade era '0, 3' */
 }
 
 /* ========================================= */
@@ -89,7 +95,7 @@ button:hover{
     display: inline-block;
     padding: 8px 15px;
     font-size: 14px;
-    background: linear-gradient(135deg, #06d3e6da);
+    background: #06d3e6da; /* Corrigido: linear-gradient precisa de pelo menos duas cores */
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -114,7 +120,7 @@ button:hover{
     display: inline-block;
     padding: 8px 15px;
     font-size: 14px;
-    background: linear-gradient(135deg, #06d3e6da);
+    background: #06d3e6da; /* Corrigido: linear-gradient precisa de pelo menos duas cores */
     color: white;
     text-decoration: none;
     border-radius: 8px;
