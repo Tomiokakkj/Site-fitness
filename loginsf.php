@@ -1,3 +1,9 @@
+<?php
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -40,11 +46,11 @@
         <!-- Link para cadastro -->
         <p class="link">
             Não tem conta?
-            <a href="cadastrosf.html">Cadastrar</a>
+            <a href="cadastrosf.php">Cadastrar</a>
         </p>
 
         <!-- Botão voltar -->
-        <a class="bb" href="inicialsf.html">Voltar</a>
+        <a class="bb" href="inicialsf.php">Voltar</a>
 
     </div>
 
